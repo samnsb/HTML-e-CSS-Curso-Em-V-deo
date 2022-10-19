@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="cat.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset=" imagens/foto-m.png " type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reprduzindo Audio</h1>
+    <p>Vamos aprender a reporduzir áudios em HTML5.</p>
+
+    <!--Primeira opção:-->
+    <audio src="midia/Caipirinha in Hawaii - Carmen María and Edu Espinal.mp3" controls autoplay> </audio>
+    <!--MP3 WAV OGG-->
+<br>
+    <!--Segunda opção: -->
+    <!--Preload é a forma como o arquivo será carregado. 
+        Auto: vai carregar o site só quando carregar o arquivo. 
+        Metadata: carregar só algumas informações.
+        None: carregar somente quando a pessoa clicar no arquivo.-->
+    <audio preload="" autoplay controls loop> <!--Autoplay começa a msuica automático ao entrar no site. Controls mostra no site os controles do audio. Loop faz looping.-->
+        <source src="midia/Caipirinha in Hawaii - Carmen María and Edu Espinal.mp3" type="audio/mpeg">
+        <source src="midia/Caipirinha in Hawaii - Carmen María and Edu Espinal.ogg" type="audio/ogg">
+        <source src="midia/Caipirinha in Hawaii - Carmen María and Edu Espinal.wav" type="audio/wav"> <!--Evitar WAV pois muito pesado-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/Caipirinha in Hawaii - Carmen María and Edu Espinal.mp3">Clique aqui para baixar o arquivo MP3.</a> </p>
+        <!--Nese caso ele irá tentar reproduzir os 3 tipos e caso nenhum funcione, pode dar a opção de baixar.-->
+    </audio>
+</body>
+</html> 
